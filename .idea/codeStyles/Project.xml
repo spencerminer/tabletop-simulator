@@ -1,0 +1,64 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <option name="SOFT_MARGINS" value="80" />
+    <ClojureCodeStyleSettings>{
+  :audit.test.handler-test/defsystest :only-indent
+  :audit.test.handler-test/with-fake-s3 :only-indent
+  :bankbucl.ibv-provider/with-mock-provider :only-indent
+  :bankbucl.persistence.db/create-token-request-sql 1000
+  :chatty-tests/are :only-indent
+  :chatty-tests/testing :only-indent
+  :clojure.java.jdbc/with-db-connection :only-indent
+  :clojure.java.jdbc/with-db-transaction :only-indent
+  :compojure.api.sweet/api :only-indent
+  :compojure.api.sweet/context :only-indent
+  :compojure.api.sweet/middleware :only-indent
+  :compojure.core/defroutes :only-indent
+  :compojure.core/routes 1000
+  :cursive.formatting/align-maps false
+  :itl-practice.core/deftfn :only-indent
+  :itl.core/deftfn :only-indent
+  :leadzeppelin.env/deflive :only-indent
+  :leadzeppelin.handler/DELETE :only-indent
+  :leadzeppelin.handler/GET :only-indent
+  :leadzeppelin.handler/POST :only-indent
+  :leadzeppelin.handler/api :only-indent
+  :leadzeppelin.handler/context :only-indent
+  :leadzeppelin.handler/middleware 0
+  :leadzeppelin.handler/route-middleware :only-indent
+  :leadzeppelin.handler-test/defsystest :only-indent
+  :leadzeppelin.handler-test/prepop-endpoint 1000
+  :leadzeppelin.persistence.core/with-db-conn :only-indent
+  :leadzeppelin.testing/defsystest :only-indent
+  :leadzeppelin.testing/deftest :only-indent
+  :loan-arranger.autorefi/auto-refi-result 0
+  :loan-arranger.credit-service.mock/with-mock-credit-report :only-indent
+  :loan-arranger.current-fbo/debug-status :only-indent
+  :loan-arranger.current-fbo/with-fbo :only-indent
+  :loan-arranger.handler/with-audit-client :only-indent
+  :loan-arranger.handler/wrap-response :only-indent
+  :loan-arranger.handler-test/with-fast-track-eligible :only-indent
+  :loan-arranger.handler-test/with-mock-audit-client :only-indent
+  :loan-arranger.handler-test/with-throwing-endpoint :only-indent
+  :loan-arranger.laa-service.mock/with-adjusted-laa :only-indent
+  :loan-arranger.laa-service.mock/with-mock-deny-loan :only-indent
+  :loan-arranger.rule-validation.business-rules-test/testing :only-indent
+  :loan-arranger.system-tests/def-fttest :only-indent
+  :loan-arranger.system-tests/deftest :only-indent
+  :loan-arranger.system-tests/with-captured-logging :only-indent
+  :loan-arranger.test-utils/with-log-level :only-indent
+  :opplogs.core/log-at :only-indent
+  :perf.core/p :only-indent
+  :prometheus.bsa-rules-test/with-sf-app :only-indent
+  :prometheus.bsa-rules-test/write-mock-clarity-file 1000
+  :prometheus.clarity/with-mock-clarity-report :only-indent
+  :prometheus.profile/with-timer :only-indent
+  :prometheus.runner/addtest :only-indent
+  :prometheus.runner/testing :only-indent
+  :prometheus.sf/lookup-fields 1000
+  :prometheus.sf/with-sf-app :only-indent
+  :prometheus.util/wait-for :only-indent
+  :request-id.core/with-request-id-stamping :only-indent
+}</ClojureCodeStyleSettings>
+  </code_scheme>
+</component>
