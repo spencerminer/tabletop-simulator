@@ -1,20 +1,20 @@
 
 function onload()
     SetupPad = getObjectFromGUID('34abec')
-    Phase2Block = getObjectFromGUID('4b1c6e')
+    --Phase2Block = getObjectFromGUID('4b1c6e')
     RubbleBag = getObjectFromGUID('6339b8')
     Decrees = getObjectFromGUID('5a0639')
     ClergyTiles = getObjectFromGUID('49d301')
     StartingPlans = getObjectFromGUID('5bdc80')
-    PublicBuildings = getObjectFromGUID('39eb6f')
+    --PublicBuildings = getObjectFromGUID('39eb6f')
 
-    ShipZone = getObjectFromGUID('db3673')
+    --ShipZone = getObjectFromGUID('db3673')
     BlueShips = getObjectFromGUID('9274c3')
     RedShips = getObjectFromGUID('808715')
     PurpleShips = getObjectFromGUID('03d7c7')
     BrownShips = getObjectFromGUID('213c4d')
 
-    PoliticalDeckZone = getObjectFromGUID('6e7f0d')
+    --PoliticalDeckZone = getObjectFromGUID('6e7f0d')
     BluePolitical = getObjectFromGUID('e7da0d')
     RedPolitical1 = getObjectFromGUID('58d5aa')
     RedPolitical2 = getObjectFromGUID('b4c492')
@@ -77,7 +77,7 @@ function playerSetup4() playerSetup(4) end
 function playerSetup(num_players)
     global_num_players = num_players
     shuffleCollections(collections_to_shuffle)
-    moveTopPlansOver(PublicBuildings)
+    --moveTopPlansOver(PublicBuildings)
     flipTopCards(red_political_cards)
     BluePolitical.deal(5)
     StartingPlans.deal(1)
@@ -91,10 +91,10 @@ function playerSetup(num_players)
     end
     SetupPad.destruct()
 
-    Phase2Block.createButton(
-        {click_function="startRoundTwo", label="Start Round Two",
-         color={0.6,0.6,0.6}, rotation={0,270,0}, scale={0.2,0.2,0.2},
-         position={0.25,0.5,0}, width=1500, height=600, font_size=170})
+    --Phase2Block.createButton(
+    --    {click_function="startRoundTwo", label="Start Round Two",
+    --     color={0.6,0.6,0.6}, rotation={0,270,0}, scale={0.2,0.2,0.2},
+    --     position={0.25,0.5,0}, width=1500, height=600, font_size=170})
 end
 
 function setupRubble()
@@ -217,27 +217,27 @@ function placeClergyTiles()
     return 1
 end
 
-function startRoundTwo()
-    phase = 2
-    for _, player in ipairs(player_list) do
-        local cards_in_hand = tableLength(Player[player].getHandObjects())
-        PurplePolitical.deal(5 - cards_in_hand, player)
-    end
-    destructCardsInZone(ShipZone)
-    startLuaCoroutine(Global, 'placeCardsPhaseTwo')
-    startLuaCoroutine(Global, 'placeShips')
-end
+--function startRoundTwo()
+--    phase = 2
+--    for _, player in ipairs(player_list) do
+--        local cards_in_hand = tableLength(Player[player].getHandObjects())
+--        PurplePolitical.deal(5 - cards_in_hand, player)
+--    end
+--    destructCardsInZone(ShipZone)
+--    startLuaCoroutine(Global, 'placeCardsPhaseTwo')
+--    startLuaCoroutine(Global, 'placeShips')
+--end
 
-function placeCardsPhaseTwo()
-    destructCardsInZone(PoliticalDeckZone)
-    BrownPolitical1.setPositionSmooth(treasury_deck_location)
-    BrownPolitical2.setPositionSmooth(king_deck_location)
-    BrownPolitical3.setPositionSmooth(pm_deck_location)
-    BrownPolitical4.setPositionSmooth(architect_deck_location)
-    wait(70)
-    flipTopCards(brown_political_cards)
-    return 1
-end
+--function placeCardsPhaseTwo()
+--    destructCardsInZone(PoliticalDeckZone)
+--    BrownPolitical1.setPositionSmooth(treasury_deck_location)
+--    BrownPolitical2.setPositionSmooth(king_deck_location)
+--    BrownPolitical3.setPositionSmooth(pm_deck_location)
+--    BrownPolitical4.setPositionSmooth(architect_deck_location)
+--    wait(70)
+--    flipTopCards(brown_political_cards)
+--    return 1
+--end
 
 function placeShips()
     local ship_colors = {}
